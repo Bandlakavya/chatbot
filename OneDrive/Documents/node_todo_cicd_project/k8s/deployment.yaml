@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: node-todo
-        image: docker.io/YOUR_USERNAME/node-todo:latest
+        image: node-todo:latest        # <- use local image name here
+        imagePullPolicy: IfNotPresent  # <- use local image if available
         ports:
         - containerPort: 3000
 ---
